@@ -62,7 +62,7 @@ const routes = [
         path: 'jexcel',
         component: ExcelView,
         name: 'Jexcel',
-        meta: {description: 'Javascript Excel'}
+        meta: {description: ''}
       }
 
     ]

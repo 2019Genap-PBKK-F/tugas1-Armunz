@@ -1,5 +1,9 @@
 <template>
-    <div><input type="button" value="Add new row" class="btn btn-info" @click="() => spreadsheet.insertRow()" /></div>
+    <!-- <div ref="spreadsheet"></div> -->
+    <div>
+      <input type="button" value="Add new row" class="btn btn-info" @click="() => spreadsheet.insertRow()"/>
+      <input type="submit" name="blabla" id="bla" value="Insert Data" class="btn btn-info">
+      </div>
 </template>
 
 <script>
@@ -29,4 +33,5 @@ export default {
     Object.assign(this, { spreadsheet })
   }
 }
+
 </script>
