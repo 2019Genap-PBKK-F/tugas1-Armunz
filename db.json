@@ -1,0 +1,36 @@
+{
+  "tabel_mahasiswa": [
+    {
+      "id": 1,
+      "nrp": "05111740000025",
+      "nama": "Dwi Prasetya Armunanta",
+      "angkatan": "2017",
+      "jenis_kelamin": "Laki-laki",
+      "tanggal_lahir": "23-0201999",
+      "foto": "",
+      "aktif": true
+    },
+    {
+      "id": 2,
+      "nrp": "05111740000055",
+      "nama": "Hendra Ramadani",
+      "angkatan": "2017",
+      "jenis_kelamin": "Laki-laki",
+      "tanggal_lahir": "20-0401998",
+      "foto": "",
+      "aktif": true
+    },
+    {
+      "id": 3,
+      "nrp": "05111740000077",
+      "nama": "Hahahaha",
+      "angkatan": "2017",
+      "jenis_kelamin": "Laki-laki",
+      "tanggal_lahir": "2020-02-02 00:00:00",
+      "aktif": true
+    },
+    {
+      "id": 4
+    }
+  ]
+}
