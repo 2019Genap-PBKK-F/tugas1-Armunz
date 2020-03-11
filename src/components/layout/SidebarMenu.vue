@@ -27,6 +27,12 @@
         <span class="page">Data Mahasiswa</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/chart">
+      <a>
+        <i class="fas fa-chart-pie"></i>
+        <span class="page">Contoh Chart</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/setting">
       <a>
         <i class="fa fa-cog"></i>

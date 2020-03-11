@@ -11,6 +11,7 @@ import AccessView from './components/views/Access.vue'
 import ServerView from './components/views/Server.vue'
 import ReposView from './components/views/Repos.vue'
 import ExcelView from './components/views/Excel.vue'
+import ChartView from './components/views/Chart.vue'
 
 // Routes
 const routes = [
@@ -62,9 +63,13 @@ const routes = [
         path: 'jexcel',
         component: ExcelView,
         name: 'Jexcel',
-        meta: {description: ''}
+        meta: {description: 'Jexcel'}
+      }, {
+        path: 'chart',
+        component: ChartView,
+        name: 'Chart',
+        meta: {description: 'Chart.js'}
       }
-
     ]
   }, {
     // not found handler
