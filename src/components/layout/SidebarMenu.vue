@@ -33,6 +33,30 @@
         <span class="page">Contoh Chart</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/kategori-unit">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Kategori Unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/unit">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/data-dasar">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Data Dasar</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/capaian-unit">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Capaian Unit</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/setting">
       <a>
         <i class="fa fa-cog"></i>

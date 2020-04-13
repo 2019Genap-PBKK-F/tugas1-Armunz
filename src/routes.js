@@ -12,6 +12,7 @@ import ServerView from './components/views/Server.vue'
 import ReposView from './components/views/Repos.vue'
 import ExcelView from './components/views/Excel.vue'
 import ChartView from './components/views/Chart.vue'
+import KategoriUnitView from './components/views/KategoriUnit.vue'
 
 // Routes
 const routes = [
@@ -69,6 +70,11 @@ const routes = [
         component: ChartView,
         name: 'Chart',
         meta: {description: 'Chart.js'}
+      }, {
+        path: 'kategori-unit',
+        component: KategoriUnitView,
+        name: 'KategoriUnit',
+        meta: {description: 'Kategori Unit'}
       }
     ]
   }, {
