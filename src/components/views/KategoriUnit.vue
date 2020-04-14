@@ -29,18 +29,18 @@ export default {
   methods: {
     // fungsi insert Row
     insertRow () {
-      axios.post('http://localhost:8080/api/kategori-unit/').then(res => {
+      axios.post('10.199.14.46:8006/api/kategori-unit/').then(res => {
         console.log(res.data)
       })
     },
 
     // fungsi update Row
     updateRow (instance, cell, columns, row, value) {
-      axios.get('http://localhost:8080/api/kategori-unit/').then(res => {
+      axios.get('10.199.14.46:8006/api/kategori-unit/').then(res => {
         var index = Object.values(res.data[row])
         index[columns] = value
         console.log(index)
-        axios.put('http://localhost:8080/api/kategori-unit/' + index[0], {
+        axios.put('10.199.14.46:8006/api/kategori-unit/' + index[0], {
           id: index[0],
           nama: index[1]
         }).then(res => {
@@ -51,11 +51,11 @@ export default {
 
     // fungsi delete row
     deleteRow (instance, row) {
-      axios.get('http://localhost:8080/api/kategori-unit/').then(res => {
+      axios.get('10.199.14.46:8006/api/kategori-unit/').then(res => {
         var index = Object.values(res.data[row])
 
         console.log(row)
-        axios.delete('http://localhost:8080/api/kategori-unit/' + index[0])
+        axios.delete('10.199.14.46:8006/api/kategori-unit/' + index[0])
       })
     }
   },
@@ -64,7 +64,7 @@ export default {
     jexcelOptions () {
       return {
         allowToolbar: true,
-        url: 'http://localhost:8080/api/kategori-unit/',
+        url: '10.199.14.46:8006/api/kategori-unit/',
         onchange: this.updateRow,
         oninsertrow: this.insertRow,
         ondeleterow: this.deleteRow,

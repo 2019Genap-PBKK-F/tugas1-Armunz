@@ -73,7 +73,7 @@ const routes = [
       }, {
         path: 'kategori-unit',
         component: KategoriUnitView,
-        name: 'KategoriUnit',
+        name: 'Kategori Unit',
         meta: {description: 'Kategori Unit'}
       }
     ]
