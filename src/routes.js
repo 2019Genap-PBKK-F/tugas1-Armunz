@@ -13,6 +13,8 @@ import ReposView from './components/views/Repos.vue'
 import ExcelView from './components/views/Excel.vue'
 import ChartView from './components/views/Chart.vue'
 import KategoriUnitView from './components/views/KategoriUnit.vue'
+import DataDasarView from './components/views/DataDasar.vue'
+import UnitView from './components/views/Unit.vue'
 
 // Routes
 const routes = [
@@ -75,6 +77,16 @@ const routes = [
         component: KategoriUnitView,
         name: 'Kategori Unit',
         meta: {description: 'Kategori Unit'}
+      }, {
+        path: 'data-dasar',
+        component: DataDasarView,
+        name: 'Data Dasar',
+        meta: {description: 'Data Dasar'}
+      }, {
+        path: 'unit',
+        component: UnitView,
+        name: 'Unit',
+        meta: {description: 'Unit'}
       }
     ]
   }, {
