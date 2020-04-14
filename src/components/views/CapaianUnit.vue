@@ -29,22 +29,24 @@ export default {
   methods: {
     // fungsi insert Row
     insertRow () {
-      axios.post('http://10.199.14.46:8006/api/unit/').then(res => {
+      axios.post('http://localhost:8006/api/capaian-unit/').then(res => {
         console.log(res.data)
       })
     },
 
     // fungsi update Row
     updateRow (instance, cell, columns, row, value) {
-      axios.get('http://10.199.14.46:8006/api/unit/').then(res => {
+      axios.get('http://localhost:8006/api/capaian-unit/').then(res => {
         console.log(res.data)
         var index = Object.values(res.data[row])
         index[columns] = value
         console.log(index)
-        axios.put('http://10.199.14.46:8006/api/unit/' + index[0], {
+        axios.put('http://localhost:8006/api/capaian-unit/' + index[0], {
           id: index[0],
-          KategoriUnit_id: index[1],
-          nama: index[2]
+          DataDasar_id: index[1],
+          Unit_id: index[2],
+          waktu: index[3],
+          capaian: index[4]
         }).then(res => {
           console.log(res.data)
         })
@@ -53,11 +55,11 @@ export default {
 
     // fungsi delete row
     deleteRow (instance, row) {
-      axios.get('http://10.199.14.46:8006/api/unit/').then(res => {
+      axios.get('http://localhost:8006/api/capaian-unit/').then(res => {
         var index = Object.values(res.data[row])
 
         console.log(row)
-        axios.delete('http://10.199.14.46:8006/api/unit/' + index[0])
+        axios.delete('http://localhost:8006/api/capaian-unit/' + index[0])
       })
     }
   },
@@ -66,7 +68,7 @@ export default {
     jexcelOptions () {
       return {
         allowToolbar: true,
-        url: 'http://10.199.14.46:8006/api/unit/',
+        url: 'http://localhost:8006/api/capaian-unit/',
         onchange: this.updateRow,
         oninsertrow: this.insertRow,
         ondeleterow: this.deleteRow,
@@ -75,8 +77,10 @@ export default {
         responsive: true,
         columns: [
           { type: 'hidden', title: 'id', width: '10px' },
-          { type: 'dropdown', title: 'Kategori Unit', width: '200px', url: 'http://10.199.14.46:8006/api/kategori-unit-list' },
-          { type: 'text', title: 'Nama', width: '200px' }
+          { type: 'dropdown', title: 'Data Dasar', width: '200px', url: 'http://localhost:8006/api/data-dasar-list/' },
+          { type: 'dropdown', title: 'Unit', width: '200px', url: 'http://localhost:8006/api/unit-list/' },
+          { type: 'calendar', title: 'Waktu', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 },
+          { type: 'text', title: 'Capaian', width: '150px' }
         ]
       }
     }

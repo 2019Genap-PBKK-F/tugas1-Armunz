@@ -15,6 +15,7 @@ import ChartView from './components/views/Chart.vue'
 import KategoriUnitView from './components/views/KategoriUnit.vue'
 import DataDasarView from './components/views/DataDasar.vue'
 import UnitView from './components/views/Unit.vue'
+import CapaianUnitView from './components/views/CapaianUnit.vue'
 
 // Routes
 const routes = [
@@ -87,6 +88,11 @@ const routes = [
         component: UnitView,
         name: 'Unit',
         meta: {description: 'Unit'}
+      }, {
+        path: 'capaian-unit',
+        component: CapaianUnitView,
+        name: 'Capaian Unit',
+        meta: {description: 'Capaian Unit'}
       }
     ]
   }, {
