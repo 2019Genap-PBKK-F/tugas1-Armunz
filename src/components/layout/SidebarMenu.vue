@@ -21,40 +21,82 @@
         <span class="page">Tasks</span>
       </a>
     </router-link>
-    <router-link tag="li" class="pageLink" to="/jexcel">
+    <!-- <router-link tag="li" class="pageLink" to="/jexcel">
       <a>
         <i class="fa fa-table"></i>
         <span class="page">Data Mahasiswa</span>
       </a>
-    </router-link>
-    <router-link tag="li" class="pageLink" to="/chart">
+    </router-link> -->
+    <!-- <router-link tag="li" class="pageLink" to="/chart">
       <a>
         <i class="fas fa-chart-pie"></i>
         <span class="page">Contoh Chart</span>
       </a>
-    </router-link>
-    <router-link tag="li" class="pageLink" to="/kategori-unit">
+    </router-link> -->
+    <!-- <router-link tag="li" class="pageLink" to="/kategori-unit">
       <a>
         <i class="fa fa-table"></i>
         <span class="page">Kategori Unit</span>
       </a>
-    </router-link>
-    <router-link tag="li" class="pageLink" to="/unit">
+    </router-link> -->
+    <!-- <router-link tag="li" class="pageLink" to="/unit">
       <a>
         <i class="fa fa-table"></i>
         <span class="page">Unit</span>
       </a>
-    </router-link>
+    </router-link> -->
     <router-link tag="li" class="pageLink" to="/data-dasar">
       <a>
         <i class="fa fa-table"></i>
         <span class="page">Data Dasar</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/jenis-satuan-kerja">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Jenis Satuan Kerja</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/periode">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Periode</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/master-indikator">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Master Indikator</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikator-periode">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Indikator Periode</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/satuan-kerja">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Satuan Kerja</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/capaian-unit">
       <a>
         <i class="fa fa-table"></i>
         <span class="page">Capaian Unit</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikator-satuan-kerja">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Indikator Satuan Kerja</span>
+      </a>
+    </router-link>
+    <router-link tag="li" class="pageLink" to="/indikator-satuan-kerja-log">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Indikator Satuan Kerja Log</span>
       </a>
     </router-link>
     <router-link tag="li" class="pageLink" to="/setting">

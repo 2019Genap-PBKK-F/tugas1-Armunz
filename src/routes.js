@@ -16,6 +16,13 @@ import KategoriUnitView from './components/views/KategoriUnit.vue'
 import DataDasarView from './components/views/DataDasar.vue'
 import UnitView from './components/views/Unit.vue'
 import CapaianUnitView from './components/views/CapaianUnit.vue'
+import JenisSatkerView from './components/views/JenisSatker.vue'
+import PeriodeView from './components/views/Periode.vue'
+import MasterIndikatorView from './components/views/MasterIndikator.vue'
+import IndikatorPeriodeView from './components/views/IndikatorPeriode.vue'
+import SatuanKerjaView from './components/views/SatuanKerja.vue'
+import IndikatorSatuanKerjaView from './components/views/IndikatorSatuanKerja.vue'
+import IndikatorSatuanKerjaLogView from './components/views/IndikatorSatuanKerjaLog.vue'
 
 // Routes
 const routes = [
@@ -93,6 +100,41 @@ const routes = [
         component: CapaianUnitView,
         name: 'Capaian Unit',
         meta: {description: 'Capaian Unit'}
+      }, {
+        path: 'jenis-satuan-kerja',
+        component: JenisSatkerView,
+        name: 'Jenis Satuan Kerja',
+        meta: {description: 'Jenis Satuan Kerja'}
+      }, {
+        path: 'periode',
+        component: PeriodeView,
+        name: 'Periode',
+        meta: {description: 'Periode'}
+      }, {
+        path: 'master-indikator',
+        component: MasterIndikatorView,
+        name: 'Master Indikator',
+        meta: {description: 'Master Indikator'}
+      }, {
+        path: 'indikator-periode',
+        component: IndikatorPeriodeView,
+        name: 'Indikator Periode',
+        meta: {description: 'Indikator Periode'}
+      }, {
+        path: 'satuan-kerja',
+        component: SatuanKerjaView,
+        name: 'Satuan Kerja',
+        meta: {description: 'Satuan Kerja'}
+      }, {
+        path: 'indikator-satuan-kerja',
+        component: IndikatorSatuanKerjaView,
+        name: 'Indikator Satuan Kerja',
+        meta: {description: 'Indikator Satuan Kerja'}
+      }, {
+        path: 'indikator-satuan-kerja-log',
+        component: IndikatorSatuanKerjaLogView,
+        name: 'Indikator Satuan Kerja Log',
+        meta: {description: 'Indikator Satuan Kerja Log'}
       }
     ]
   }, {
