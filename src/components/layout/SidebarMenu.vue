@@ -51,6 +51,12 @@
         <span class="page">Data Dasar</span>
       </a>
     </router-link>
+    <router-link tag="li" class="pageLink" to="/aspek">
+      <a>
+        <i class="fa fa-table"></i>
+        <span class="page">Aspek</span>
+      </a>
+    </router-link>
     <router-link tag="li" class="pageLink" to="/jenis-satuan-kerja">
       <a>
         <i class="fa fa-table"></i>

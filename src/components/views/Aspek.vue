@@ -29,23 +29,21 @@ export default {
   methods: {
     // fungsi insert Row
     insertRow () {
-      axios.post('http://10.199.14.46:8006/api/data-dasar/').then(res => {
+      axios.post('http://10.199.14.46:8006/api/aspek/').then(res => {
         console.log(res.data)
       })
     },
 
     // fungsi update Row
     updateRow (instance, cell, columns, row, value) {
-      axios.get('http://10.199.14.46:8006/api/data-dasar/').then(res => {
+      axios.get('http://10.199.14.46:8006/api/aspek/').then(res => {
         var index = Object.values(res.data[row])
         index[columns] = value
         console.log(index)
-        axios.put('http://10.199.14.46:8006/api/data-dasar/' + index[0], {
+        axios.put('http://10.199.14.46:8006/api/aspek/' + index[0], {
           id: index[0],
-          nama: index[1],
-          create_date: index[2],
-          last_update: index[3],
-          expired_date: index[4]
+          aspek: index[1],
+          komponen_aspek: index[2]
         }).then(res => {
           console.log(res.data)
         })
@@ -54,11 +52,11 @@ export default {
 
     // fungsi delete row
     deleteRow (instance, row) {
-      axios.get('http://10.199.14.46:8006/api/data-dasar/').then(res => {
+      axios.get('http://10.199.14.46:8006/api/aspek/').then(res => {
         var index = Object.values(res.data[row])
 
         console.log(row)
-        axios.delete('http://10.199.14.46:8006/api/data-dasar/' + index[0])
+        axios.delete('http://10.199.14.46:8006/api/aspek/' + index[0])
       })
     }
   },
@@ -66,19 +64,17 @@ export default {
   computed: {
     jexcelOptions () {
       return {
-        csvHeaders: true,
-        search: true,
         allowToolbar: true,
-        url: 'http://10.199.14.46:8006/api/data-dasar/',
+        url: 'http://10.199.14.46:8006/api/aspek/',
         onchange: this.updateRow,
         oninsertrow: this.insertRow,
         ondeleterow: this.deleteRow,
+        search: true,
+        pagination: 10,
         columns: [
           { type: 'hidden', title: 'id', width: '10px' },
-          { type: 'text', title: 'Nama', width: '700px' },
-          { type: 'calendar', title: 'Create_Date', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 },
-          { type: 'calendar', title: 'Last_Update', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 },
-          { type: 'calendar', title: 'Expired_Date', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 }
+          { type: 'text', title: 'Aspek', width: '200px' },
+          { type: 'text', title: 'Komponen Aspek', width: '300px' }
         ],
         updateTable: function(instance, cell, col, row, val, label, cellName) {
           if (row % 2) {
