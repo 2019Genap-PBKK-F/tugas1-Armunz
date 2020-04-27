@@ -72,7 +72,7 @@ export default {
         oninsertrow: this.insertRow,
         ondeleterow: this.deleteRow,
         search: true,
-        pagination: 10,
+        pagination: 20,
         responsive: true,
         columns: [
           { type: 'hidden', title: 'id', width: '10px' },

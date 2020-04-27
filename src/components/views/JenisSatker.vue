@@ -73,7 +73,7 @@ export default {
         oninsertrow: this.insertRow,
         ondeleterow: this.deleteRow,
         search: true,
-        pagination: 10,
+        // pagination: 10,
         responsive: true,
         columns: [
           { type: 'hidden', title: 'id', width: '10px' },
@@ -81,7 +81,12 @@ export default {
           { type: 'calendar', title: 'Create_Date', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 },
           { type: 'calendar', title: 'Last_Update', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 },
           { type: 'calendar', title: 'Expired_Date', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 }
-        ]
+        ],
+        updateTable: function(instance, cell, col, row, val, label, cellName) {
+          if (row % 2) {
+            cell.style.backgroundColor = '#edf3ff'
+          }
+        }
       }
     }
   }

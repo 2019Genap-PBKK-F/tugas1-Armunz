@@ -76,7 +76,7 @@ export default {
         responsive: true,
         columns: [
           { type: 'hidden', title: 'id', width: '10px' },
-          {type: 'text', title: 'Nama', width: '200px'},
+          { type: 'text', title: 'Nama', width: '200px' },
           { type: 'calendar', title: 'Create_Date', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 },
           { type: 'calendar', title: 'Last_Update', width: '200px', options: { format: 'DD/MM/YYYY HH:MI:SS', time: 1 }, today: 1 }
         ]
